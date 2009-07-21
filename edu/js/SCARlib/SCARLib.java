@@ -3,10 +3,10 @@ package edu.js.SCARlib;
 import java.awt.AWTException;
 import java.awt.Point;
 import java.awt.Robot;
-
-import sun.awt.X11.XlibWrapper;
-
 public class SCARLib {
+	public static void main(String[] args) {
+		
+	}
 	long Xdisplayconnection;
 	static {
 		System.loadLibrary("SCARLib");
