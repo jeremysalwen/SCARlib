@@ -2,9 +2,9 @@
  * SCARLibOSX.c
  *
  *  Created on: Jul 21, 2009
- *      Author: salwen
+ *      Author:
  */
-
+#include <Carbon/Carbon.h>
 #include "edu_js_SCARlib_SCARLib.h"
 
 typedef struct {
@@ -21,21 +21,17 @@ JNIEXPORT jlong JNICALL Java_edu_js_SCARlib_SCARLib_UserFindWindow(JNIEnv * env,
 
 JNIEXPORT jlong JNICALL Java_edu_js_SCARlib_SCARLib_XOpenDisplay__
   (JNIEnv * env, jobject class) {
-  	return (jlong)XOpenDisplay(NULL);
+  	return 0;
   }
 
   JNIEXPORT jlong JNICALL Java_edu_js_SCARlib_SCARLib_XOpenDisplay__Ljava_lang_String_2
   (JNIEnv * env, jobject class, jstring name) {
-  	const char * cname=(*env)->GetStringUTFChars(env,name,0);
-  	Display * result=XOpenDisplay(cname);
-  	(*env)->ReleaseStringUTFChars(env,name,cname);
-  	return (jlong)result;
+  	return 0;
   }
 
   JNIEXPORT void JNICALL Java_edu_js_SCARlib_SCARLib_XCloseDisplay
   (JNIEnv * env, jobject class , jlong connection) {
-  	Display * c=(Display *) connection;
-  	XCloseDisplay(c);
+  	return 0;
   }
 
   JNIEXPORT jobject JNICALL Java_edu_js_SCARlib_SCARLib_getWindowLocation

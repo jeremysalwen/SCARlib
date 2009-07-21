@@ -10,7 +10,7 @@ clientwin.o: clientwin.c
 libSCARLib.jnilib: SCARLibOSX.o
 	cc -dynamiclib -o libSCARLib.jnilib SCARLibOSX.o -framework JavaVM
 SCARLibOSX.o: SCARLibOSX.c
-	cc -c -I/System/Library/Frameworks/JavaVM.framework/Headers SCARLibOSX.c -o SCARLibOSX.o
+	cc -c -I/System/Library/Frameworks/JavaVM.framework/Headers -I/System/Library/Frameworks/Carbon.framework/Headers SCARLibOSX.c -o SCARLibOSX.o
 edu_js_SCARlib_SCARLib.h: edu/js/SCARlib/SCARLib.class
 	javah -jni edu.js.SCARlib.SCARLib
 clean:
