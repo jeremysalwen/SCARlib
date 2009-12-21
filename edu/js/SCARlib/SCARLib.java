@@ -3,12 +3,18 @@ package edu.js.SCARlib;
 import java.awt.AWTException;
 import java.awt.Point;
 import java.awt.Robot;
+import java.io.File;
+
 public class SCARLib {
 	public static void main(String[] args) {
-		
+
 	}
+
 	long Xdisplayconnection;
 	static {
+		System.setProperty("java.library.path", System
+				.getProperty("java.library.path")
+				+ File.pathSeparatorChar + ".");
 		System.loadLibrary("SCARLib");
 	}
 
@@ -78,5 +84,6 @@ public class SCARLib {
 	public long GetWindowBySize(int width, int height) {
 		return GetWindowBySize(Xdisplayconnection, width, height);
 	}
-	public native long GetWindowBySize(long connection,int width, int height);
+
+	public native long GetWindowBySize(long connection, int width, int height);
 }
