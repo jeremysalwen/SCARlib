@@ -1,8 +1,6 @@
 package edu.js.SCARlib;
 
-import java.awt.AWTException;
 import java.awt.Point;
-import java.awt.Robot;
 import java.io.File;
 
 public class SCARLib {
