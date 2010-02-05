@@ -3,10 +3,7 @@ package edu.js.SCARlib;
 import java.awt.Point;
 import java.io.File;
 
-public class SCARLib {
-	public static void main(String[] args) {
-
-	}
+public class SCARLib implements SCARLib_interface {
 
 	long Xdisplayconnection;
 	static {
