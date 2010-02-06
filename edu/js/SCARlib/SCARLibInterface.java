@@ -2,7 +2,7 @@ package edu.js.SCARlib;
 
 import java.awt.Point;
 
-public interface SCARLib_interface {
+public interface SCARLibInterface {
 
 	long UserFindWindow();
 
