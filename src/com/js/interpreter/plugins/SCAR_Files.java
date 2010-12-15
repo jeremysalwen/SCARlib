@@ -23,7 +23,6 @@ public class SCAR_Files implements PascalPlugin {
 	int filecounter = 0;
 
 	public SCAR_Files(IDE i) {
-		ide = i;
 		open_files = new HashMap<Integer, RandomAccessFile>();
 	}
 
